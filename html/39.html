@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />  
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PHP里不应该再使用mysql函数的3大原因-TU30.com</title>
+
+
+
+<style type="text/css">
+
+body {
+	background-color: #707070;
+	color: #000;
+	line-height: 160%;
+}
+
+
+.container {
+	width: 80%;
+	max-width: 1000px;
+	min-width: 1000px;
+	background-color: #FFF;
+	margin: 0 auto; 
+
+}
+
+
+
+
+
+.content {
+	padding: 10px 0;
+	margin: 10px;
+	padding: 10px;
+	background-color: #FAFAFA;
+	
+	word-wrap:break-word;
+}
+
+
+
+
+
+
+
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+</style>
+
+
+
+
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?2f2f6867d47ab5450b8612721837a7bc";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+  
+  <div class="content">
+ <h1 align="left"><strong><a href="../index.html">TU30.com</a></strong></h1>
+ 
+ 
+ <script type="text/javascript">
+    /*头部*/
+    var cpro_id = "u1993279";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+ 
+ 
+  <h3>[分类导航]：<strong> <a href="../1index1.html">PHP</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../2index1.html">趣闻</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="../3index1.html">我的地盘</a></strong></h3>
+   <h4><strong>所在位置：<a href="../index.html">TU30.com</a></strong>&gt;<a href="../index.html"> <a href="../1index1.html">PHP</a></a>&gt; PHP里不应该再使用mysql函数的3大原因</h4>
+
+<h1>PHP里不应该再使用mysql函数的3大原因</h1>
+<p><em>2015-03-21 17:56:21 </em></p>
+
+
+
+
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+<br>
+<div>不要再在PHP里边使用mysql函数了，PHP的mysql函数不安全，mysql函数在PHP7里边将会被完全删除！是什么技术上的原因，让我们不该再使用php的mysql函数呢？如mysql_query()、mysql_connect()、mysql_real_escape_string()……等等。虽然这些函数仍然可以用，但是为什么我们不该再使用它们呢？下面，图三十网（tu30.com）的博主将为您解答这个问题。</div><div>&nbsp; &nbsp; 以下是PHP里不应该再使用mysql函数的3大原因：</div><div>&nbsp; &nbsp; 1、mysql函数已在PHP5.5中正式弃用，并将在PHP7中被删除。</div><div>&nbsp; &nbsp; 2、mysql函数缺少面向对象的接口。</div><div>&nbsp; &nbsp; 3、mysql函数不支持以下特性：</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持非阻塞连续获取</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持异步查询</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持参数化查询</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持存储过程</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持多个语句</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持在MySQL 5.1的中所有功能</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持加密(SSL)</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持压缩</div><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 不支持完整的字符集</div><div>&nbsp; &nbsp; 那么，我们该使用什么样的查询语句呢？</div><div>&nbsp; &nbsp; PHP提供了三种不同的api连接到MySQL，这三种api是：mysql, mysqli以及PDO扩展。MySql函数是非常受欢迎的,但是官方团队并不鼓励再使用它们。在php手册里边，当你看到关于Mysql的函数，会发现都标有红色的标志，那意味着它们已经被弃用了。弃用ext/mysql函数不仅安全,而且使用其他数据库查询方法可以同样具有MySQL函数的所有功能。更好的方法是使用PDO代替ext/mysql函数。PDO的用法相信不用图三十网（tu30.com）博主再教大家了吧？网上多的是，搜一搜就知道啦。</div><div><br></div>
+
+<script type="text/javascript">
+    /*中部*/
+    var cpro_id = "u1993309";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1aid39" data-title="请替换成文章的标题" data-url="请替换成文章的网址"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"tu30"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+<!--下一行是百度推荐代码-->
+<div id="hm_t_53900"></div>
+
+
+
+
+
+
+<p><em>上一篇</em>：<a href="40.html">排查PHP代码连接Mysql数据库错误的6大方法</a></p>
+<p><em>下一篇</em>：没有了</p>
+<p><em>最新十篇文章</em>：</p>
+<a href="40.html">排查PHP代码连接Mysql数据库错误的6大方法</a><br><a href="39.html">PHP里不应该再使用mysql函数的3大原因</a><br>
+<hr />
+<script type="text/javascript">
+    /*底部*/
+    var cpro_id = "u1993422";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    /*对联*/
+var cpro_id = "u1993473";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    /*内文2*/
+var cpro_id = "u1993448";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/cnw.js" type="text/javascript"></script>
+
+<!--<script type="text/javascript">
+    /*右下角 大*/
+var cpro_id = "u1993496";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>
+-->
+<script type="text/javascript">
+    /*图片*/
+var cpro_id = "u1993432";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/i.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    /*按钮*/
+var cpro_id = "u1994565";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    /*右下角 大*/
+var cpro_id = "u1993496";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/f.js" type="text/javascript"></script>
+
+ <script type="text/javascript">
+    /*左右折叠*/
+    var cpro_id = "u1994578";
+</script>
+<script src="http://cpro.baidustatic.com/cpro/ui/s.js" type="text/javascript"></script>
+
+<div align="center">
+  <p><a href="../index.html">TU30.com</a>保持所有权利。本静态博客由<a href="../index.html">TU30-Blog</a>强力驱动！本站文章除非特殊说明，均为原创，如果转载，必须注明出处和原始链接，盗版必究！</p>
+  <p>（需要源码的请加qq群308730553)
+  
+  </p>
+
+
+</div>
+<p>&nbsp;</p>
+  
+  
+  <!-- end .content --></div>
+ 
+<!-- end .container --></div>
+
+
+</body>
+</html>
