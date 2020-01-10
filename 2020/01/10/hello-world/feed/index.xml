@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	《世界，您好！》的评论	</title>
-	<atom:link href="/2020/01/10/hello-world/feed/" rel="self" type="application/rss+xml" />
-	<link>/2020/01/10/hello-world/</link>
+	<atom:link href="/site2/2020/01/10/hello-world/feed/" rel="self" type="application/rss+xml" />
+	<link>/site2/2020/01/10/hello-world/</link>
 	<description>又一个WordPress站点</description>
 	<lastBuildDate>Fri, 10 Jan 2020 09:09:57 +0000</lastBuildDate>
 	<sy:updatePeriod>
@@ -20,10 +20,10 @@
 			<item>
 				<title>
 				作者：一位WordPress评论者				</title>
-				<link>/2020/01/10/hello-world/#comment-1</link>
+				<link>/site2/2020/01/10/hello-world/#comment-1</link>
 		<dc:creator><![CDATA[一位WordPress评论者]]></dc:creator>
 		<pubDate>Fri, 10 Jan 2020 09:09:57 +0000</pubDate>
-		<guid isPermaLink="false">/?p=1#comment-1</guid>
+		<guid isPermaLink="false">/site2/?p=1#comment-1</guid>
 					<description><![CDATA[嗨，这是一条评论。
 要开始审核、编辑及删除评论，请访问仪表盘的“评论”页面。
 评论者头像来自&lt;a href=&quot;https://gravatar.com&quot;&gt;Gravatar&lt;/a&gt;。]]></description>
