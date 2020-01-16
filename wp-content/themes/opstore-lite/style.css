@@ -1,0 +1,55 @@
+/*
+Theme Name: Opstore Lite
+Theme URI: https://wpoperation.com/themes/opstore-lite/
+Template: opstore
+Author: WPoperation
+Author URI: https://wpoperation.com/
+Description: Opstore Lite is free WordPress theme built to power online stores specially for furnitures and interior decorations. But it can power any ecommerce websites with beautiful interface and features which you really will enjoy. This is child theme of Opstore. The theme is fully built for elementor page builder so you can create your layouts with just drag and drop interface.
+Text Domain: opstore-lite
+Tags: right-sidebar,left-sidebar,custom-background,custom-menu,featured-images,threaded-comments,translation-ready,custom-logo,footer-widgets,blog,post-formats,sticky-post,theme-options,news,editor-style,custom-header,e-commerce
+Version: 1.0.3
+License:      GNU General Public License, version 3 (GPLv3)
+License URI:  http://www.gnu.org/licenses/gpl-3.0.txt
+
+
+Opstore Lite is a WordPress Theme, 
+Copyright (C) 2019, WPoperation
+Opstore Lite is distributed under the terms of the GNU GPL
+
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+http://www.gnu.org/licenses/gpl-3.0.txt
+
+
+*/
+.woocommerce div.product .woocommerce-tabs ul.tabs{
+	padding-left: 7px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	background: #333;
+	 color: #fff;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+   color: #333;
+   padding: 10px 17px;
+	 border: 1px solid #333;
+}
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:after,
+.woocommerce div.product .woocommerce-tabs ul.tabs:before{
+	content:none;
+}
+.woocommerce div.product .woocommerce-tabs .panel {
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li{
+	padding-left: 0;
+}
+
+.opstore-sticky-cart .right-wrap .btn{
+	 text-transform: capitalize;
+}
+

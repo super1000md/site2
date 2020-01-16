@@ -1,0 +1,22 @@
+#sub-accordion-section-udyama_theme_general_settings .customize-control-checkbox label {
+    font-weight: bold;
+}
+#sub-accordion-section-udyama_theme_general_settings .customize-control-description {
+    font-size: 95%;
+    opacity: 0.8;
+}
+#customize-control-udyama_upgrade_msg .description {
+    font-size: 14px;
+    font-style: normal;
+}
+#customize-control-udyama_upgrade_msg .description .button {
+    margin: auto;
+}
+#accordion-section-udyama_upgrade .accordion-section-title {
+    background: #0073aa;
+    color: #fff;
+    border-left: 4px solid #0073aa;
+}
+#accordion-section-udyama_upgrade  .accordion-section-title:after {
+    color: #fff;
+}
